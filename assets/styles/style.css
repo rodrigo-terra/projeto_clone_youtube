@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  /* 100% da altura da viewport (tela do usuário) */
+  display: grid;
+
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 10fr;
+  grid-template-areas:
+    "header header"
+    "aside main"
+  ;
+}
+
+header {
+  grid-area: header;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr 1.5fr;
+  align-items: center;
+}
+
+#menu-top-center,
+#menu-top-right {
+  display: flex;
+  /* Torna as seções flexíveis */
+  align-items: center;
+  /* Alinhamento vertical */
+  justify-content: center;
+  /* Alinhamento horizontal */
+}
+
+#menu-top-left {
+  display: flex;
+  /* Torna as seções flexíveis */
+  align-items: center;
+  /* Alinhamento vertical */
+  justify-content: center;
+  /* Alinhamento horizontal */
+  gap: 40px;
+}
+
+#menu-top-center input {
+  height: 26px;
+  border: 1px solid #d8d8d8;
+  width: 40%;
+}
+
+#menu-top-center img {
+  border: 1px solid #d8d8d8;
+  margin-left: -1px;
+}
+
+#menu-top-right {
+  display: flex;
+  /* Torna as seções flexíveis */
+  align-items: center;
+  /* Alinhamento vertical */
+  justify-content: end;
+  /* Alinhamento horizontal */
+  margin-right: 10px;
+  gap: 40px;
+}
+
+#icon-user {
+  width: 34px;
+  height: 34px;
+  border-radius: 20px;
+}
+
+aside {
+  background-color: palevioletred;
+  grid-area: aside;
+}
+
+main {
+  background-color: #f9f9f9;
+  grid-area: main;
+}
